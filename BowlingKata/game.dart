@@ -1,15 +1,15 @@
-class Roll {
+class Frame {
   int roll1;
   int roll2;
   int specialRoll;
 
-  Roll(this.roll1, this.roll2, {this.specialRoll});
+  Frame(this.roll1, this.roll2, {this.specialRoll});
 }
 
 class GameCalculator {
-  List<Roll> _rolls = [];
+  List<Frame> _rolls = [];
 
-  void roll(Roll pinsDown) {
+  void roll(Frame pinsDown) {
     _rolls.add(pinsDown);
   }
 
