@@ -16,18 +16,24 @@ class GameCalculator {
   int score() {
     int _totalScore = 0;
 
-    for (int frame = 0; frame < _rolls.length; frame++) {
-      //frame 1 to 9
-      if (frame < 9) {
-        if (isStrike(frame)) {
-          _totalScore += 10 + _rolls[frame + 1].roll1 + _rolls[frame + 1].roll2;
-        } else if (isSpare(frame)) {
-          _totalScore += 10 + _rolls[frame + 1].roll1;
+    for (int index = 0; index < _rolls.length; index++) {
+      //index 1 to 9
+      if (index < 9) {
+        if (isStrike(index)) {
+          _totalScore += 10 + _rolls[index + 1].roll1 + _rolls[index + 1].roll2;
+
+          if (isStrike(index + 1) && (index + 1 != 8)) {
+            _totalScore += (index + 2 < 9)
+                ? _rolls[index + 2].roll1
+                : _rolls[index + 1].specialRoll;
+          }
+        } else if (isSpare(index)) {
+          _totalScore += 10 + _rolls[index + 1].roll1;
         } else {
-          _totalScore += _rolls[frame].roll1 + _rolls[frame].roll2;
+          _totalScore += _rolls[index].roll1 + _rolls[index].roll2;
         }
       }
-      //frame 10
+      //index 10
       else {
         //final last = _rolls.last.id - 1;
         final last = 9;
