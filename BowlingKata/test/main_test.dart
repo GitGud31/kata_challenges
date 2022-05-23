@@ -3,7 +3,13 @@ import 'package:test/test.dart';
 import '../game.dart';
 
 void main() {
-  GameCalculator game = GameCalculator();
+  GameCalculator game;
+
+  setUp(() {
+    game = GameCalculator();
+  });
+
+  tearDown(() {});
 
   test("miss all rolls, totalscore should be 0", () {
     final rolls = [
