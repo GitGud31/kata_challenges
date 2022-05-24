@@ -1,6 +1,0 @@
-name: fizzbuzz_kata
-
-environment:
-  sdk: '>=2.10.0 <3.0.0'
-
-dependencies: {test: ^1.21.1}

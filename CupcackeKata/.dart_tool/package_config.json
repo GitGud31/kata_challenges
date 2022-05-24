@@ -278,13 +278,13 @@
       "languageVersion": "2.12"
     },
     {
-      "name": "fizzbuzz_kata",
+      "name": "cupcake_kata",
       "rootUri": "../",
       "packageUri": "lib/",
       "languageVersion": "2.10"
     }
   ],
-  "generated": "2022-05-24T11:40:24.353709Z",
+  "generated": "2022-05-24T11:54:18.770824Z",
   "generator": "pub",
   "generatorVersion": "2.16.1"
 }
