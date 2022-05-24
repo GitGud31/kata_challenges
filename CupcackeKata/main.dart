@@ -7,32 +7,32 @@ void main() {
 }
 
 //Data source
-abstract class Cake {
+abstract class Product {
   String name();
   double price();
 }
 
 //Decorator Data Source
-class Topping implements Cake {
-  final Cake cake;
+class Topping implements Product {
+  final Product product;
 
-  Topping(this.cake);
+  Topping(this.product);
 
   @override
   String name() {
-    return cake.name() + " " + withTopping() + " ";
+    return product.name() + " " + withTopping() + " ";
   }
 
   String withTopping() {
-    return cake.name().contains("with") ? "and" : "with";
+    return product.name().contains("with") ? "and" : "with";
   }
 
   @override
-  double price() => cake.price();
+  double price() => product.price();
 }
 
 //Decorator
-class Cupcake implements Cake {
+class Cupcake implements Product {
   static final cupcake = "🧁";
 
   Cupcake();
@@ -45,7 +45,7 @@ class Cupcake implements Cake {
 }
 
 //Decorator
-class Cookie implements Cake {
+class Cookie implements Product {
   static final cookie = "🍪";
 
   Cookie();
@@ -61,7 +61,7 @@ class Cookie implements Cake {
 class Nut extends Topping {
   static final nuts = "🥜";
 
-  Nut(Cake cake) : super(cake);
+  Nut(Product Product) : super(Product);
 
   @override
   String name() {
@@ -76,7 +76,7 @@ class Nut extends Topping {
 class Chocolate extends Topping {
   static final chocolate = "🍫";
 
-  Chocolate(Cake cake) : super(cake);
+  Chocolate(Product Product) : super(Product);
 
   @override
   String name() {

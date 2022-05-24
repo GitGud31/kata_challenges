@@ -6,7 +6,7 @@ import '../main.dart';
 void main() {
   group("names", () {
     group("initializations", () {
-      Cake _cake;
+      Product _cake;
       test("Initialize Cupcake", () {
         _cake = Cupcake();
         expect(_cake.name(), "🧁");
