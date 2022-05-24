@@ -1,7 +1,6 @@
-/**
- * Order of the toppings in important
- * Decorator pattern approach
- */
+//** Kata Problem description
+//
+//https://codingdojo.org/kata/cupcake/ */
 
 void main() {
   print("cupcacke kata");
@@ -32,7 +31,6 @@ class Topping implements Cake {
   double price() => cake.price();
 }
 
-
 //Decorator
 class Cupcake implements Cake {
   static final cupcake = "🧁";
@@ -46,7 +44,6 @@ class Cupcake implements Cake {
   double price() => 1.0;
 }
 
-
 //Decorator
 class Cookie implements Cake {
   static final cookie = "🍪";
@@ -59,7 +56,6 @@ class Cookie implements Cake {
   @override
   double price() => 2.0;
 }
-
 
 //Decorator
 class Nut extends Topping {
@@ -75,7 +71,6 @@ class Nut extends Topping {
   @override
   double price() => super.price() + 0.2;
 }
-
 
 //Decorator
 class Chocolate extends Topping {
