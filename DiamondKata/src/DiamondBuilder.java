@@ -11,12 +11,6 @@ class DiamondBuilder {
 
     public DiamondBuilder(String letter) {
         this.letter = letter;
-        this.distance = 0;
-
-        getDistance();
-    }
-
-    void getDistance() {
         this.distance = alphabet.indexOf(this.letter);
     }
 
