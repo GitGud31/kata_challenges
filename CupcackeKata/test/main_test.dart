@@ -118,4 +118,21 @@ void main() {
       expect(double.parse(_cake.price().toStringAsFixed(1)), 2.3);
     });
   });
+
+  group("Bundles", () {
+    test("Bundle: cupcake with chocolate, cookie with chocolate", () {
+      final bundle = Bundle(
+        [
+          Chocolate(Cupcake()),
+          Chocolate(Cookie()),
+        ],
+      );
+      expect(
+        bundle.name(),
+        "This 📦 has: 🧁 with 🍫. 🍪 with 🍫.",
+      );
+
+      expect(bundle.price(), 3.2);
+    });
+  });
 }

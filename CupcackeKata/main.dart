@@ -12,6 +12,29 @@ abstract class Product {
   double price();
 }
 
+// Decorator
+class Bundle implements Product {
+  final List<Product> products;
+
+  Bundle(this.products);
+
+  @override
+  String name() {
+    String description = "This 📦 has:";
+    products.forEach((p) => description += " ${p.name()}.");
+
+    return description;
+  }
+
+  @override
+  double price() {
+    double totalPrice = 0.0;
+    products.forEach((p) => totalPrice += p.price());
+
+    return totalPrice;
+  }
+}
+
 //Decorator Data Source
 class Topping implements Product {
   final Product product;
@@ -61,7 +84,7 @@ class Cookie implements Product {
 class Nut extends Topping {
   static final nuts = "🥜";
 
-  Nut(Product Product) : super(Product);
+  Nut(Product product) : super(product);
 
   @override
   String name() {
@@ -76,7 +99,7 @@ class Nut extends Topping {
 class Chocolate extends Topping {
   static final chocolate = "🍫";
 
-  Chocolate(Product Product) : super(Product);
+  Chocolate(Product product) : super(product);
 
   @override
   String name() {
