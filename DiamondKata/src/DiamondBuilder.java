@@ -7,24 +7,24 @@ class DiamondBuilder {
             "r", "s", "t", "u", "v", "w", "x", "y", "z");
 
     final String letter;
-    private int distance;
+    private final int distance;
 
     public DiamondBuilder(String letter) {
         this.letter = letter;
         this.distance = alphabet.indexOf(this.letter);
     }
 
-    void gap(int start, int end){
+    void gap(int start, int end) {
         for (int j = start; j < end; j++) {
             System.out.print(" ");
         }
     }
 
-    void letterPrinter(int letterIndex){
+    void letterPrinter(int letterIndex) {
         for (int k = 0; k <= (letterIndex * 2); k++) {
-            if(k == 0 || k == (letterIndex * 2)){
+            if (k == 0 || k == (letterIndex * 2)) {
                 System.out.print(alphabet.get(letterIndex));
-            }else{
+            } else {
                 System.out.print(" ");
             }
         }
