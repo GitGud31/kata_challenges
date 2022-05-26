@@ -55,7 +55,26 @@ void main() {
     expect(game.gameScore(), "Deuce");
   });
 
-  test("Player1 is in advantage, Player2 has 15", () {
+  test("Player1 is in advantage", () {
+    //p1
+    game.playerScored(p1);
+    game.playerScored(p1);
+    game.playerScored(p1);
+    game.playerScored(p1);
+
+    //p2
+    game.playerScored(p2);
+    game.playerScored(p2);
+    game.playerScored(p2);
+
+    expect(game.p1.score, equals(4));
+    expect(game.p2.score, equals(3));
+
+    expect(game.displayCurrentScore(), "SCORE: Player1 [40A], Player2 [40]");
+    expect(game.gameScore(), "Player1 is in advantage");
+  });
+
+  test("Deuce, then Player1 scores, Player1 has advantage", () {
     //p1
     game.playerScored(p1);
     game.playerScored(p1);
@@ -63,15 +82,38 @@ void main() {
 
     //p2
     game.playerScored(p2);
+    game.playerScored(p2);
+    game.playerScored(p2);
 
-    expect(game.p1.score, equals(3));
-    expect(game.p2.score, equals(1));
+    expect(game.isDeuce(), equals(true));
+    expect(game.displayCurrentScore(), "SCORE: Player1 [40], Player2 [40]");
 
-    expect(game.displayCurrentScore(), "SCORE: Player1 [40], Player2 [15]");
+    game.playerScored(p1);
+
+    expect(game.displayCurrentScore(), "SCORE: Player1 [40A], Player2 [40]");
     expect(game.gameScore(), "Player1 is in advantage");
   });
 
-    test("Player2 wins, Player1 has 15", () {
+  test("Player1 has advantage, Player2 score, game back to Deuce", () {
+    //p1
+    game.playerScored(p1);
+    game.playerScored(p1);
+    game.playerScored(p1);
+    game.playerScored(p1);
+
+    //p2
+    game.playerScored(p2);
+    game.playerScored(p2);
+    game.playerScored(p2);
+
+    expect(game.gameScore(), "Player1 is in advantage");
+
+    game.playerScored(p2);
+
+    expect(game.isDeuce(), equals(true));
+  });
+
+  test("Player2 wins, Player1 has 15", () {
     //p1
     game.playerScored(p1);
 

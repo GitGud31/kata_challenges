@@ -37,10 +37,12 @@ class TennisGame {
     return false;
   }
 
-  bool isThereOnePlayerInAdvantage() {
-    if (!haveWinner() && p1.score >= 3 && p1.score > p2.score) return true;
-    if (!haveWinner() && p2.score >= 3 && p2.score > p1.score) return true;
-    return false;
+  String isThereOnePlayerInAdvantage() {
+    final playersAtForty = (p1.score >= 3 && p2.score >= 3);
+
+    if (!haveWinner() && playersAtForty && p1.score > p2.score) return "p1";
+    if (!haveWinner() && playersAtForty && p2.score > p1.score) return "p2";
+    return "eql";
   }
 
   String gameScore() {
@@ -48,10 +50,10 @@ class TennisGame {
       return "Deuce";
     }
 
-    if (isThereOnePlayerInAdvantage()) {
-      return (p1.score > p2.score)
-          ? "${p1.name} is in advantage"
-          : "${p2.name} is in advantage";
+    if (isThereOnePlayerInAdvantage() == "p1") {
+      return "${p1.name} is in advantage";
+    } else if (isThereOnePlayerInAdvantage() == "p2") {
+      return "${p2.name} is in advantage";
     }
 
     if (haveWinner()) {
@@ -76,6 +78,8 @@ class TennisGame {
       return "30";
     } else if (score == 3) {
       return "40";
+    } else if (score == 4) {
+      return "40A";
     } else {
       return "invalid score";
     }
