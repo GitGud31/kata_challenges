@@ -14,7 +14,7 @@ void main() {
 
       test("Initialize Cookie", () {
         _cake = Cookie();
-        expect(_cake.name(), Cookie.cookie);
+        expect(_cake.name(), "🍪");
       });
     });
 
@@ -120,19 +120,20 @@ void main() {
   });
 
   group("Bundles", () {
-    test("Bundle: cupcake with chocolate, cookie with chocolate", () {
+    test("Bundle: cupcake with chocolate, cookie with chocolate, cookie with nuts and chocolate", () {
       final bundle = Bundle(
         [
           Chocolate(Cupcake()),
           Chocolate(Cookie()),
+          Chocolate(Nut(Cookie())),
         ],
       );
       expect(
         bundle.name(),
-        "This 📦 has: 🧁 with 🍫. 🍪 with 🍫.",
+        "This 📦 has: 🧁 with 🍫. 🍪 with 🍫. 🍪 with 🥜 and 🍫.",
       );
 
-      expect(bundle.price(), 3.2);
+      expect(bundle.price(), 5.5);
     });
   });
 }

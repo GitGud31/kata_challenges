@@ -1,0 +1,32 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "BowlingKata",
+            "cwd": "BowlingKata",
+            "request": "launch",
+            "type": "dart"
+        },
+        {
+            "name": "CupcackeKata",
+            "cwd": "CupcackeKata",
+            "request": "launch",
+            "type": "dart"
+        },
+        {
+            "name": "DiamondKata",
+            "cwd": "DiamondKata",
+            "request": "launch",
+            "type": "dart"
+        },
+        {
+            "name": "FizzBuzz",
+            "cwd": "FizzBuzz",
+            "request": "launch",
+            "type": "dart"
+        }
+    ]
+}

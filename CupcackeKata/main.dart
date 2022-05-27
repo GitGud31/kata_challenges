@@ -6,6 +6,8 @@ void main() {
   print("cupcacke kata");
 }
 
+
+
 //Data source
 abstract class Product {
   String name();
@@ -34,6 +36,9 @@ class Bundle implements Product {
     return totalPrice;
   }
 }
+
+
+//nuts(chocolat(cupcake))
 
 //Decorator Data Source
 class Topping implements Product {

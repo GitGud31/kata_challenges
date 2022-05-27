@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="JAVA_MODULE" version="4">
+  <component name="NewModuleRootManager" inherit-compiler-output="true">
+    <exclude-output />
+    <content url="file://$MODULE_DIR$">
+      <excludeFolder url="file://$MODULE_DIR$/FizzBuzz/build" />
+      <excludeFolder url="file://$MODULE_DIR$/FizzBuzz/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/FizzBuzz/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/BowlingKata/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/BowlingKata/build" />
+      <excludeFolder url="file://$MODULE_DIR$/BowlingKata/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/CupcackeKata/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/CupcackeKata/build" />
+      <excludeFolder url="file://$MODULE_DIR$/CupcackeKata/.pub" />
+    </content>
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+  </component>
+</module>
