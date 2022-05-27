@@ -1,5 +1,4 @@
 import java.time.LocalDateTime;
-import java.util.Objects;
 import java.util.Scanner;
 
 class OhceBot {
@@ -15,11 +14,6 @@ class OhceBot {
     String userName;
     LocalDateTime time;
 
-    //special treatment for first message, ask for username
-    //check for palindrome
-    //an infinite loop until user types Stop!
-    //reverse user input if note palindrome
-
     OhceBot(LocalDateTime time) {
         this.isFirstMessage = true;
         this.time = time;
@@ -28,64 +22,74 @@ class OhceBot {
         this.sc = new Scanner(System.in);
     }
 
-    void readInput() {
-        if (isFirstMessage) {
-            System.out.println("$ What's your name: ");
-            this.userName = sc.nextLine();
-        } else {
-            System.out.println("> ");
-            this.userInput = sc.nextLine();
-        }
-        this.isFirstMessage = false;
-        this.time = LocalDateTime.now();
-    }
-
     void running() {
         System.out.println("Type: Stop! to exit.");
+
+        
         do {
             readInput();
             botResponse();
-        } while (!Objects.equals(userInput, EXIT_BOT));
+        } while (!this.userInput.equals(EXIT_BOT));
+    }
+
+    void readInput() {
+        System.out.println();
+        
+        if (this.isFirstMessage) {
+            System.out.print("> What's your name: ");
+            this.userName = sc.nextLine();
+        } else {
+            System.out.print("$ ");
+            this.userInput = sc.nextLine();
+        }
     }
 
     private void botResponse() {
         final int hour = this.time.getHour();
+
+        if (this.userInput.equals(EXIT_BOT)) {
+            System.out.println("Adios " + this.userName);
+            return;
+        }
+
         if (this.isFirstMessage) {
-            if (hour >= 12 && hour <= 20) {
-                System.out.println("$ " + TWELVE_TO_TWENTY + " " + this.userName);
+            this.isFirstMessage = false;
+
+            System.out.println();
+            if ((hour > 20 && hour < 24) || (hour > 0 && hour <= 6)) {
+                System.out.print("> " + TWENTY_TO_SIX + " " + this.userName);
             }
-            if (hour >= 6 && hour <= 12) {
-                System.out.println("$ " + SIX_TO_TWELVE + " " + this.userName);
+            if (hour > 6 && hour <= 12) {
+                System.out.print("> " + SIX_TO_TWELVE + " " + this.userName);
             }
-            if (hour >= 20 && hour <= 6) {
-                System.out.println("$ " + TWENTY_TO_SIX + " " + this.userName);
+            if (hour > 12 && hour <= 20) {
+                System.out.print("> " + TWELVE_TO_TWENTY + " " + this.userName);
             }
+            System.out.println();
         } else {
+
+            System.out.println();
             if (isPalindrome()) {
-                System.out.println("$ " + this.userInput);
-                System.out.println("$ " + FOUND_PALINDROME);
+                System.out.print("> " + this.userInput);
+                System.out.print("> " + FOUND_PALINDROME);
             } else {
-                System.out.println("$ " + this.userInput);
+                System.out.print("> " + this.userInput);
             }
         }
     }
 
     private boolean isPalindrome() {
-        StringBuilder reverse = new StringBuilder();
-        int length = userInput.length();
+        String reverse = new String();
+        int length = this.userInput.length();
 
         for (int i = length - 1; i >= 0; i--) {
-            reverse.append(userInput.charAt(i));
+            reverse += this.userInput.charAt(i);
         }
 
-        System.out.println(reverse);
-
-        if (this.userInput.equals(reverse.toString())) {
-            System.out.println("in");
-            this.userInput = reverse.toString();
-            return true;
+        if (!this.userInput.equals(reverse)) {
+            this.userInput = reverse;
+            return false;
         }
-        return false;
+        return true;
     }
 }
-

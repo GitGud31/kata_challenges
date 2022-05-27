@@ -1,7 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ed0c63c8-5602-4a8a-9663-cebb476f34af" name="Changes" comment="" />
+    <list default="true" id="ed0c63c8-5602-4a8a-9663-cebb476f34af" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.vscode/launch.json" beforeDir="false" afterPath="$PROJECT_DIR$/.vscode/launch.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BowlingKata/.dart_tool/package_config.json" beforeDir="false" afterPath="$PROJECT_DIR$/BowlingKata/.dart_tool/package_config.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BowlingKata/.dart_tool/pub/bin/test/test.dart-2.16.1.snapshot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BowlingKata/.packages" beforeDir="false" afterPath="$PROJECT_DIR$/BowlingKata/.packages" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CupcackeKata/.dart_tool/package_config.json" beforeDir="false" afterPath="$PROJECT_DIR$/CupcackeKata/.dart_tool/package_config.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CupcackeKata/.dart_tool/pub/bin/test/test.dart-2.16.1.snapshot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CupcackeKata/.packages" beforeDir="false" afterPath="$PROJECT_DIR$/CupcackeKata/.packages" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DiamondKata/src/DiamondBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/DiamondKata/src/DiamondBuilder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FizzBuzz/.dart_tool/package_config.json" beforeDir="false" afterPath="$PROJECT_DIR$/FizzBuzz/.dart_tool/package_config.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FizzBuzz/.dart_tool/pub/bin/test/test.dart-2.16.1.snapshot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FizzBuzz/.packages" beforeDir="false" afterPath="$PROJECT_DIR$/FizzBuzz/.packages" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ohce_kata/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/ohce_kata/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ohce_kata/src/Models.java" beforeDir="false" afterPath="$PROJECT_DIR$/ohce_kata/src/Models.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -32,5 +46,21 @@
       <updated>1653478205778</updated>
     </task>
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>

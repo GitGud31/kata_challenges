@@ -5,6 +5,13 @@
     "version": "0.2.0",
     "configurations": [
         {
+            "type": "java",
+            "name": "Launch Main",
+            "request": "launch",
+            "mainClass": "Main",
+            "projectName": "kata_challenges_88c0cecc"
+        },
+        {
             "name": "BowlingKata",
             "cwd": "BowlingKata",
             "request": "launch",
@@ -17,14 +24,14 @@
             "type": "dart"
         },
         {
-            "name": "DiamondKata",
-            "cwd": "DiamondKata",
+            "name": "FizzBuzz",
+            "cwd": "FizzBuzz",
             "request": "launch",
             "type": "dart"
         },
         {
-            "name": "FizzBuzz",
-            "cwd": "FizzBuzz",
+            "name": "tennis_kata",
+            "cwd": "tennis_kata",
             "request": "launch",
             "type": "dart"
         }

@@ -1,3 +1,7 @@
+/**
+ * Kata description link: https://kata-log.rocks/ohce-kata
+ *  */
+
 import java.time.LocalDateTime;
 
 public class Main {
